@@ -3,48 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Neel Sheth | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h1>About Me</h1>
-        <p>Hello! I'm Meen Patel, a passionate web developer with experience in building dynamic websites and applications.</p>
-        <p>Feel free to check out my work below and contact me if you're interested in collaborating!</p>
-    </section>
-
-    <section id="projects">
-        <h1>Projects</h1>
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>Description of the project.</p>
-            <a href="https://github.com/your-username/project1">View on GitHub</a>
+    <!-- Navigation tabs -->
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('home')">Home</button>
+            <button class="tab-button" onclick="showTab('projects')">Projects</button>
+            <button class="tab-button" onclick="showTab('contact')">Contact</button>
         </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>Description of the project.</p>
-            <a href="https://github.com/your-username/project2">View on GitHub</a>
+
+        <!-- Tab Contents -->
+        <div id="home" class="tab-content active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello! I'm Neel Sheth, a passionate Data Scientist with expertise in Python, machine learning, and web development. Check out my projects and get in touch!</p>
         </div>
-        <!-- Add more projects as needed -->
-    </section>
 
-    <section id="contact">
-        <h1>Contact</h1>
-        <p>Feel free to reach out to me via email: <a href="mailto:meenpatel288@gmail.com">meenpatel288@gmail.com</a></p>
-    </section>
+        <div id="projects" class="tab-content">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Data Analysis with Python</h3>
+                <p>This project involves analyzing a real-world dataset to uncover insights using Python and data visualization techniques.</p>
+                <a href="https://github.com/your-username/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Streamlit Web App</h3>
+                <p>I built an interactive web app using Streamlit to visualize data and provide insights in real-time.</p>
+                <a href="https://github.com/your-username/project2" target="_blank" class="btn">View on GitHub</a>
+            </div>
+        </div>
 
-    <footer>
-        <p>&copy; 2025 Your Name</p>
-    </footer>
+        <div id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
