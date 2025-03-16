@@ -7,6 +7,44 @@
     <title>Neel Sheth | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <!-- Navigation tabs -->
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="showTab('home')">Home</button>
+            <button class="tab-button" onclick="showTab('projects')">Projects</button>
+            <button class="tab-button" onclick="showTab('contact')">Contact</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div id="home" class="tab-content active">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello! I'm Neel Sheth, a passionate Data Scientist with expertise in Python, machine learning, and web development. Check out my projects and get in touch!</p>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h2>My Projects</h2>
+            <div class="project">
+                <h3>Data Analysis with Python</h3>
+                <p>This project involves analyzing a real-world dataset to uncover insights using Python and data visualization techniques.</p>
+                <a href="https://github.com/your-username/project1" target="_blank" class="btn">View on GitHub</a>
+            </div>
+            <div class="project">
+                <h3>Streamlit Web App</h3>
+                <p>I built an interactive web app using Streamlit to visualize data and provide insights in real-time.</p>
+                <a href="https://github.com/your-username/project2" target="_blank" class="btn">View on GitHub</a>
+            </div>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript -->
+    <script src="script.js"></script>
+=======
 
 <body>
 
@@ -37,7 +75,6 @@
             <p>&copy; 2025 Neel Sheth</p>
         </div>
     </footer>
-
 </body>
 
 </html>
