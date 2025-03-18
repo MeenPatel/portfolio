@@ -1,80 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neel Sheth | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tabbed Navigation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your existing CSS file -->
 </head>
 <body>
-    <!-- Navigation tabs -->
+
     <div class="tabs">
+        <!-- Tab Buttons -->
         <div class="tab-buttons">
-            <button class="tab-button active" onclick="showTab('home')">Home</button>
-            <button class="tab-button" onclick="showTab('projects')">Projects</button>
-            <button class="tab-button" onclick="showTab('contact')">Contact</button>
+            <button class="tab-button active" onclick="changeTab('home', this)">Home</button>
+            <button class="tab-button" onclick="changeTab('projects', this)">Projects</button>
+            <button class="tab-button" onclick="changeTab('contact', this)">Contact</button>
         </div>
 
-        <!-- Tab Contents -->
+        <!-- Tab Content -->
         <div id="home" class="tab-content active">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hello! I'm Neel Sheth, a passionate Data Scientist with expertise in Python, machine learning, and web development. Check out my projects and get in touch!</p>
+            <h2>Welcome to Home</h2>
+            <p>This is the Home section.</p>
         </div>
 
         <div id="projects" class="tab-content">
             <h2>My Projects</h2>
-            <div class="project">
-                <h3>Data Analysis with Python</h3>
-                <p>This project involves analyzing a real-world dataset to uncover insights using Python and data visualization techniques.</p>
-                <a href="https://github.com/your-username/project1" target="_blank" class="btn">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Streamlit Web App</h3>
-                <p>I built an interactive web app using Streamlit to visualize data and provide insights in real-time.</p>
-                <a href="https://github.com/your-username/project2" target="_blank" class="btn">View on GitHub</a>
-            </div>
+            <p>Here are my amazing projects.</p>
         </div>
 
         <div id="contact" class="tab-content">
             <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
+            <p>Get in touch through my contact page.</p>
         </div>
     </div>
 
-    <!-- Link to the external JavaScript -->
-    <script src="script.js"></script>
-=======
+    <script>
+        function changeTab(tabId, button) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
 
-<body>
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Neel Sheth</h1>
-                <p>Data Scientist | Python Developer</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
 
-    <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Click the links above to explore my work, skills, and get in touch with me.</p>
-    </div>
+            // Add active class to the clicked button
+            button.classList.add('active');
+        }
+    </script>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Neel Sheth</p>
-        </div>
-    </footer>
 </body>
-
 </html>
