@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Navigation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your existing CSS file -->
+</head>
+<body>
+
+    <div class="tabs">
+        <!-- Tab Buttons -->
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="changeTab('home', this)">Home</button>
+            <button class="tab-button" onclick="changeTab('projects', this)">Projects</button>
+            <button class="tab-button" onclick="changeTab('contact', this)">Contact</button>
+        </div>
+
+        <!-- Tab Content -->
+        <div id="home" class="tab-content active">
+            <h2>Welcome to Home</h2>
+            <p>This is the Home section.</p>
+        </div>
+
+        <div id="projects" class="tab-content">
+            <h2>My Projects</h2>
+            <p>Here are my amazing projects.</p>
+        </div>
+
+        <div id="contact" class="tab-content">
+            <h2>Contact Me</h2>
+            <p>Get in touch through my contact page.</p>
+        </div>
+    </div>
+
+    <script>
+        function changeTab(tabId, button) {
+            // Hide all tab content
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabId).classList.add('active');
+
+            // Remove active class from all buttons
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
