@@ -1,90 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meen Patel | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <img src="C:\Users\Meen Patel\Downloads\Meen_photo.png" alt="Icon" style="width:128px;height:128px;">
-    <h1>Meen Patel</h1>
-    <p>If you'd like to get in touch, feel free to email me at <a href="mailto:meenpatel288@gmail.com">meenpatel288@gmail.com</a>.</p>
-    <p>If you'd like to get in touch, feel free to email me at <a href="tel:(+91)9173111523">(+91)9173111523</a>.</p>
-        
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meen Patel</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background-color: black; /* Set header background to black */
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            
+            
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
+
+        header p {
+            font-size: 20px;
+            margin: 10px 0;
+            
+        }
+
+        /* Fixed Navigation Bar */
+        nav {
+            background-color: black; /* Keep the header background as black */
+            padding: 10px 0;
+            text-align: right;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 10 20px;
+            color: white;
+            width: 100%;
+
+            font-size: 18px;
+            background-color: transparent; /* Make background transparent */
+            padding: 10px 15px; /* Adjust padding for a cleaner look */
+            border: none; /* No borders */
+            text-decoration: none; /* No underline */
+            transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition on hover */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+            background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+           /* padding: 10px 0px; /* Slight padding increase on hover */
+        }
+
+        /* Transparent Background for Sections */
+        section {
+            background-color: white; /* Set all section backgrounds to transparent */
+            padding: 40px 0px;
+        }
+
+        /* About Section */
+        section#about {
+            display: flex;
+            margin-top: 80px;
+            max-width: 100%;
+            background-color: transparent;
+            box-shadow: none;
+            border-radius: 8px;
+            /*padding: 10px;*/
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+        }
+
+        /* Ensuring equal height for skill, experience, and education sections */
+        .content > div {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content h2 {
+            margin-top: 0;
+        }
+
+        /* Content boxes */
+        .content-box {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            /*width: 100%;*/
+        }
+
+        /* Button Styling */
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            margin-right: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #45a049;
+        }
+
+        /* Form */
+        form input, form textarea {
+            width: 80%;
+            /*padding: 10px;*/
+            /*margin: 10px 0;*/
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .home-button {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .home-button:hover {
+            background-color: #0b7dda;
+        }
+
+        /* Adjust width of About and Skill/Experience/Education */
+        #about .content, #skills .content {
+            width: 100%; /* Make these sections fill the screen width */
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Navigation tabs -->
-    <div class="tabs">
-        <div class="tab-buttons">
-            <button class="tab-button active" onclick="showTab('home')">Home</button>
-            <button class="tab-button" onclick="showTab('projects')">Projects</button>
-            <button class="tab-button" onclick="showTab('experience')">Experience</button>
-        </div>
 
-        <!-- Tab Contents -->
-        <div id="home" class="tab-content active">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hello! I'm Meen Patel, a passionate Data Scientist with expertise in Python, machine learning, and web development. Check out my projects and get in touch!</p>
-        </div>
+<!-- Header -->
+<header id="home">
+    <h1>Meen Patel</h1>
+    <p>Web Developer | Designer | Problem Solver</p>
+</header>
 
-        <div id="projects" class="tab-content">
-            <h2>My Projects</h2>
-            <div class="project">
-                <h3>Data Analysis with Python</h3>
-                <p>This project involves analyzing a real-world dataset to uncover insights using Python and data visualization techniques.</p>
-                <a href="https://github.com/your-username/project1" target="_blank" class="btn">View on GitHub</a>
-            </div>
-            <div class="project">
-                <h3>Streamlit Web App</h3>
-                <p>I built an interactive web app using Streamlit to visualize data and provide insights in real-time.</p>
-                <a href="https://github.com/your-username/project2" target="_blank" class="btn">View on GitHub</a>
-            </div>
+<!-- Fixed Navigation Bar -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- About Section -->
+<section id="about">
+    <div class="content">
+        <div>
+            <h2>About Me</h2>
+            <p>I am a passionate web developer with a focus on building modern and responsive web applications. I have experience working with various technologies and enjoy creating intuitive user experiences.</p>
             
-        </div>
-
-        <div id="experience" class="tab-content">
-            <h2>Contact Me</h2>
-            <p>If you'd like to get in touch, feel free to email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
-        </div>
-    </div>
-
-    <!-- Link to the external JavaScript -->
-    <script src="script.js"></script>
-
-
-    <body>
-        <h2>Contact Me</h2>
-        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:meenpatel288@gmail.com">meenpatel288@gmail.com</a>.</p>
-        <p>If you'd like to get in touch, feel free to email me at <a href="tel:(+91)9173111523">(+91)9173111523</a>.</p>
-        <p>If you'd like to get in touch, feel free to email me at <a href="https://www.linkedin.com/in/meen-patel-a48826247/">linkedin</a>.</p>
-<!--=======       
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Meen Patel</h1>
-                <p>Data Scientist | Python Developer</p>
+            <!-- Buttons added here -->
+            <div class="buttons">
+                <button onclick="showContent('me')">Skill</button>
+                <button onclick="showContent('you')">Experience</button>
+                <button onclick="showContent('they')">Education</button>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="skills.html">Skills</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
         </div>
-    </header>
 
-    <div class="container">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Click the links above to explore my work, skills, and get in touch with me.</p>
+        <!-- Content for Skill, Experience, and Education -->
+        <div>
+            <div id="me" class="content-box">
+                <h2>Skill</h2>
+                <p>This content is about my skills. I love coding and building cool projects!</p>
+            </div>
+            <div id="you" class="content-box">
+                <h2>Experience</h2>
+                <p>This content is for you. If you are interested in web development, let's collaborate!</p>
+            </div>
+            <div id="they" class="content-box">
+                <h2>Education</h2>
+                <p>This content is for them. Here's where I share my experiences working with others in tech.</p>
+            </div>
+        </div>
     </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Meen Patel</p>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="content">
+        <div>
+            <h2>Skills</h2>
+            <ul>
+                <li>Frontend Development: HTML, CSS, JavaScript, React</li>
+                <li>Backend Development: Node.js, Express</li>
+                <li>Databases: MongoDB, MySQL</li>
+                <li>Version Control: Git, GitHub</li>
+                <li>Tools: VS Code, Figma, Docker</li>
+            </ul>
         </div>
-    </footer>-->
-</body>
+    </div>
+</section>
 
+<!-- Projects Section -->
+<section id="projects">
+    <div class="content">
+        <div>
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Project 1: E-commerce App</a> - A fully functional e-commerce platform built with React and Node.js.</li>
+                <li><a href="#">Project 2: Personal Blog</a> - A blog built with React and Markdown for dynamic content management.</li>
+                <li><a href="#">Project 3: Task Manager</a> - A task management app that allows users to create, edit, and delete tasks.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="content">
+        <div>
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Meen Patel. All Rights Reserved.</p>
+</footer>
+
+<script>
+    // Default content shown when the page loads
+    window.onload = function() {
+        showContent('me'); // Show Skill content by default
+        equalizeHeight(); // Adjust heights on load
+    };
+
+    function showContent(contentId) {
+        // Hide all content boxes
+        var boxes = document.querySelectorAll('.content-box');
+        boxes.forEach(function(box) {
+            box.style.display = 'none';
+        });
+
+        // Show the selected content box
+        var selectedContent = document.getElementById(contentId);
+        if (selectedContent) {
+            selectedContent.style.display = 'block';
+        }
+
+        equalizeHeight(); // Adjust heights when content is toggled
+    }
+
+    function equalizeHeight() {
+        // Get the heights of all sections
+        var aboutSection = document.querySelector('#about .content');
+        var skillSection = document.querySelector('#skills .content');
+        var projectSection = document.querySelector('#projects .content');
+
+        // Get the maximum height
+        var maxHeight = Math.max(aboutSection.offsetHeight, skillSection.offsetHeight, projectSection.offsetHeight);
+
+        // Apply the maximum height to all sections
+        aboutSection.style.height = maxHeight + 'px';
+        skillSection.style.height = maxHeight + 'px';
+        projectSection.style.height = maxHeight + 'px';
+    }
+</script>
+
+</body>
 </html>
