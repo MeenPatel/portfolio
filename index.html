@@ -37,6 +37,7 @@
             display: flex;
             align-items: center;
             justify-content: left;
+            flex-wrap: wrap; /* Added to allow wrapping */
         }
 
         .header-image {
@@ -44,6 +45,7 @@
             height: 250px; /* Adjust size as needed */
             border-radius: 50%; /* Optional: if you want the image to be circular */
             margin-right: 20px; /* Add space between image and text */
+            flex-shrink: 0; /* Prevents shrinking of image */
         }
 
         /* Heading and paragraph styling */
@@ -97,19 +99,20 @@
         section#about {
             display: flex;
             margin-top: 80px;
-            max-height: 100%;
+            max-width: 100%;
             background-color: black;
             box-shadow: none;
             border-radius: 8px;
+            flex-wrap: wrap; /* Added to allow wrapping */
         }
 
         .content {
             display: flex;
             gap: 20px;
             width: 100%;
+            flex-wrap: wrap; /* Added to allow wrapping on small screens */
         }
 
-        /* Ensuring equal height for skill, experience, and education sections */
         .content > div {
             flex: 1;
             min-width: 300px;
@@ -187,6 +190,43 @@
             background-color: #e61818;
         }
 
+        /* Media Query for Portrait Mode */
+        @media screen and (max-width: 768px) {
+            header {
+                padding: 20px 10px;
+            }
+
+            .header-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Adjust content for mobile devices */
+            .content {
+                display: block;
+            }
+
+            .content > div {
+                min-width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav {
+                padding: 15px 10px;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 5px;
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
