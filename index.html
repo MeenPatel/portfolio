@@ -37,15 +37,15 @@
             display: flex;
             align-items: center;
             justify-content: left;
-            flex-wrap: wrap; /* Added to allow wrapping */
+            flex-wrap: wrap; /* Allow wrapping */
         }
 
         .header-image {
-            width: 250px; /* Adjust size as needed */
-            height: 250px; /* Adjust size as needed */
-            border-radius: 50%; /* Optional: if you want the image to be circular */
-            margin-right: 20px; /* Add space between image and text */
-            flex-shrink: 0; /* Prevents shrinking of image */
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-right: 20px;
+            flex-shrink: 0;
         }
 
         /* Heading and paragraph styling */
@@ -63,24 +63,25 @@
         nav {
             background-color: black;
             padding: 10px 0;
-            text-align: right;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+            display: flex; /* Ensures horizontal layout */
+            justify-content: center; /* Center the buttons horizontally */
         }
 
         nav a {
-            margin: 10px 20px;
+            margin: 0 20px; /* Add space between each button */
             color: white;
-            width: 100%;
             font-size: 18px;
             background-color: transparent;
             padding: 10px 15px;
             border: none;
             text-decoration: none;
             transition: background-color 0.3s ease, padding 0.3s ease;
+            display: inline-block; /* Makes sure buttons are inline */
         }
 
         nav a:hover {
@@ -103,14 +104,14 @@
             background-color: black;
             box-shadow: none;
             border-radius: 8px;
-            flex-wrap: wrap; /* Added to allow wrapping */
+            flex-wrap: wrap; /* Allow wrapping */
         }
 
         .content {
             display: flex;
             gap: 20px;
             width: 100%;
-            flex-wrap: wrap; /* Added to allow wrapping on small screens */
+            flex-wrap: wrap; /* Allow wrapping */
         }
 
         .content > div {
@@ -155,6 +156,7 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            display: inline-block; /* Makes sure buttons are inline */
         }
 
         /* Hover State for All Buttons */
@@ -189,44 +191,6 @@
         form button:hover {
             background-color: #e61818;
         }
-
-        /* Media Query for Portrait Mode */
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 20px 10px;
-            }
-
-            .header-image {
-                width: 150px;
-                height: 150px;
-            }
-
-            .header-content {
-                justify-content: center;
-                text-align: center;
-            }
-
-            /* Adjust content for mobile devices */
-            .content {
-                display: block;
-            }
-
-            .content > div {
-                min-width: 100%;
-                margin-bottom: 20px;
-            }
-
-            nav {
-                padding: 15px 10px;
-                text-align: center;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 5px;
-                padding: 8px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -251,7 +215,7 @@
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#achivements">Achievements</a>
+    <a href="#achievements">Achievements</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -288,7 +252,7 @@
 </section>
 
 <!-- Achievements Section -->
-<section id="achivements">
+<section id="achievements">
     <div class="content">
         <div>
             <h2>Achievements</h2>
