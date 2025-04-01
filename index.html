@@ -24,6 +24,18 @@
             background-color: #e61818;
         }
 
+        /* Progress Bar Styling */
+        #progress-bar {
+            position: fixed;
+            top: 50px; /* Position right below the nav bar */
+            left: 0;
+            height: 5px;
+            background-color: #e61818;
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.2s ease;
+        }
+
         /* Header */
         header {
             background-color: black;
@@ -38,7 +50,7 @@
             display: flex;
             align-items: center;
             justify-content: left;
-            flex-wrap: wrap; /* Allow wrapping */
+            flex-wrap: wrap;
         }
 
         .header-image {
@@ -69,21 +81,19 @@
             width: 100%;
             z-index: 1000;
             box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
-            display: flex; /* Ensures horizontal layout */
-            justify-content: center; /* Center the buttons horizontally */
+            display: flex;
+            justify-content: center;
         }
 
         nav a {
-            margin:10px auto ; /* Add space between each button */
-            /*max-width: 50%;*/
+            margin: 10px auto;
             color: white;
             font-size: 18px;
             background-color: transparent;
-            /*padding: 10px 0px;*/
             border: none;
             text-decoration: none;
-            transition: background-color 0.3s ease, padding 0.3s ease;
-            display: inline-block; /* Makes sure buttons are inline */
+            transition: background-color 0.3s ease;
+            display: inline-block;
         }
 
         nav a:hover {
@@ -106,14 +116,14 @@
             background-color: black;
             box-shadow: none;
             border-radius: 8px;
-            flex-wrap: wrap; /* Allow wrapping */
+            flex-wrap: wrap;
         }
 
         .content {
             display: flex;
             gap: 20px;
             width: 100%;
-            flex-wrap: wrap; /* Allow wrapping */
+            flex-wrap: wrap;
         }
 
         .content > div {
@@ -158,7 +168,6 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            display: inline-block; /* Makes sure buttons are inline */
         }
 
         /* Hover State for All Buttons */
@@ -196,6 +205,9 @@
     </style>
 </head>
 <body>
+
+<!-- Progress Bar -->
+<div id="progress-bar"></div>
 
 <!-- Header -->
 <header id="home">
@@ -311,19 +323,29 @@
 </footer>
 
 <script>
+    // Update progress bar on scroll
+    window.onscroll = function() {
+        updateProgressBar();
+    };
+
+    function updateProgressBar() {
+        var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        var scrollPercentage = (scrollPosition / scrollHeight) * 100;
+        document.getElementById('progress-bar').style.width = scrollPercentage + '%';
+    }
+
     // Default content shown when the page loads
     window.onload = function() {
         showContent('skill'); // Show Skill content by default
     };
 
     function showContent(contentId) {
-        // Hide all content boxes
         var boxes = document.querySelectorAll('.content-box');
         boxes.forEach(function(box) {
             box.style.display = 'none';
         });
 
-        // Show the selected content box
         var selectedContent = document.getElementById(contentId);
         if (selectedContent) {
             selectedContent.style.display = 'block';
