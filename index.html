@@ -217,8 +217,11 @@
             <h1>Meen Patel</h1>
             <p>Web Developer | Designer | Problem Solver</p>
             <div class="buttons">
-            <button onclick="showContent('resume')">Resume</button>
+            <!--<button onclick="showContent('resume')">Resume</button>-->
+            <button onclick="window.open('resume.pdf', '_blank')">Resume</button>
+
             <p></p>
+            
 
             <button onclick="showContent('linkedin')">Linkedin</button>
             <p></p>
@@ -226,22 +229,13 @@
             <button onclick="showContent('Github')">Github</button>
         </div>
         
-        </div>
-        <div id="resume" class="content-box">
-            <h3>Resume</h3>
-            <p></p>
-            <iframe src="resume.pdf" width="800" height="600" style="border: none;"></iframe>
-            </div>
-        <div id="linkedin" class="content-box">
-            <h3>Resume</h3>
-            <p></p>
-            <iframe src="https://www.linkedin.com/in/meen-patel-a48826247" width="800" height="600" style="border: none;"></iframe>
-            </div>
-        <div id="github" class="content-box">
-            <h3>Resume</h3>
-            <p></p>
-            <iframe src="resume.pdf" width="800" height="600" style="border: none;"></iframe>
-            </div>
+    </div>
+    <div id="resume" class="content-box">
+        <h3>Resume</h3>
+        <p></p>
+        <iframe src="resume.pdf" width="800" height="600" style="border: none;"></iframe>
+    </div>
+        
     </div>
     
 </header>
@@ -272,7 +266,7 @@
         <div>
             <div id="skill" class="content-box">
                 <h2>Skill</h2>
-
+                
                 <p>This content is about my skills. I love coding and building cool projects!</p>
             </div>
             <div id="experience" class="content-box">
