@@ -6,202 +6,311 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meen Patel</title>
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #030303;
-        }
+        /* General Styles *//* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #030303;
+}
 
-        a {
-            color: white;
-            background-color: #3b3b3b;
-        }
+a {
+    color: white;
+    background-color: #3b3b3b;
+}
 
-        a:hover {
-            text-decoration: underline;
-            background-color: #e61818;
-        }
+a:hover {
+    text-decoration: underline;
+    background-color: #e61818;
+}
 
-        /* Progress Bar Styling */
-        #progress-bar {
-            position: fixed;
-            top: 50px; /* Position right below the nav bar */
-            left: 0;
-            height: 5px;
-            background-color: #e61818;
-            width: 0%;
-            z-index: 9999;
-            transition: width 0.2s ease;
-        }
+/* Progress Bar Styling */
+#progress-bar {
+    position: fixed;
+    top: 50px; /* Position right below the nav bar */
+    left: 0;
+    height: 5px;
+    background-color: #e61818;
+    width: 0%;
+    z-index: 9999;
+    transition: width 0.2s ease;
+}
 
-        /* Header */
-        header {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        /* Header Content (flex container) */
-        .header-content {
-            padding: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: left;
-            flex-wrap: wrap;
-        }
+/* Header Content (flex container) */
+.header-content {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+}
 
-        .header-image {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
+.header-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
 
-        /* Heading and paragraph styling */
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
+/* Heading and paragraph styling */
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
 
-        header p {
-            font-size: 20px;
-            margin: 10px 0;
-        }
+header p {
+    font-size: 20px;
+    margin: 10px 0;
+}
 
-        /* Fixed Navigation Bar */
-        nav {
-            background-color: black;
-            padding: 10px 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: center;
-        }
+/* Fixed Navigation Bar */
+nav {
+    background-color: black;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
 
-        nav a {
-            margin: 10px auto;
-            color: white;
-            font-size: 18px;
-            background-color: transparent;
-            border: none;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-        }
+nav a {
+    margin: 10px auto;
+    color: white;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
 
-        nav a:hover {
-            text-decoration: underline;
-            background-color: rgba(255, 255, 255, 0.1);
-        }
+nav a:hover {
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1);
+}
 
-        /* Transparent Background for Sections */
-        section {
-            background-color: rgb(7, 7, 7);
-            padding: 40px 0px;
-            color: white;
-        }
+/* Transparent Background for Sections */
+section {
+    background-color: rgb(7, 7, 7);
+    padding: 40px 0px;
+    color: white;
+}
 
-        /* About Section */
-        section#about {
-            display: flex;
-            margin-top: 80px;
-            max-width: 100%;
-            background-color: black;
-            box-shadow: none;
-            border-radius: 8px;
-            flex-wrap: wrap;
-        }
+/* About Section */
+section#about {
+    display: flex;
+    margin-top: 80px;
+    max-width: 100%;
+    background-color: black;
+    box-shadow: none;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
 
-        .content {
-            display: flex;
-            gap: 20px;
-            width: 100%;
-            flex-wrap: wrap;
-        }
+.content {
+    display: flex;
+    gap: 20px;
+    width:auto;
+    flex-wrap: wrap;
+    align-items: stretch; /* <- Ensure equal height boxes */
+}
 
-        .content > div {
-            flex: 1;
-            min-width: 300px;
-            background-color: #000000;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+.content > div {
+    flex: 1;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-        .content h2 {
-            margin-top: 0;
-        }
+.content h2 {
+    margin-top: 0;
+}
 
-        /* Content boxes */
-        .content-box {
-            display: none;
-        }
+/* Content boxes */
+.content-box {
+    display: none;
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-        }
+/* === Education Section Styling === */
+#education {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 120%/*700px*/;
+    margin: 20px /*auto*/;
+}
 
-        /* General Button Styling */
-        button {
-            background-color: #3b3b3b;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin-right: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+#education h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
 
-        /* Hover State for All Buttons */
-        button:hover {
-            background-color: #e61818;
-        }
+.education-item {
+    border-left: 3px solid #e61818;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
 
-        /* Adjust width of About and Skill/Experience/Education */
-        #about .content, #skills .content {
-            width: 100%;
-        }
+.education-item h3 {
+    margin: 0;
+    color: #ffffff;
+}
 
-        /* Form */
-        form input, form textarea {
-            width: 80%;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
+.education-item p {
+    margin: 5px 0 0;
+    color: #bbbbbb;
+}
 
-        form button {
-            background-color: #3b3b3b;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            margin-top: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
+/* === Skill Section Styling === */
+#skill {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px ;
+}
 
-        form button:hover {
-            background-color: #e61818;
-        }
+#skill h2 {
+    color: #ffffff;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.skill-item span {
+    min-width: 60px;
+}
+
+.progress-bar {
+    background-color: #333;
+    border-radius: 10px;
+    height: 8px;
+    flex-grow: 1;
+    position: relative;
+}
+
+.progress {
+    background-color: #e61818;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.percent {
+    color: #ffffff;
+    margin-left: 10px;
+    min-width: 40px;
+    text-align: right;
+}
+#experience {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px;
+}
+
+#experience h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.experience-item {
+    border-left: 3px solid #e61818;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.experience-item h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.experience-item p {
+    margin: 5px 0 0;
+    color: #bbbbbb;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+
+/* General Button Styling */
+button {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover State for All Buttons */
+button:hover {
+    background-color: #e61818;
+}
+
+/* Adjust width of About and Skill/Experience/Education */
+#about .content, #skills .content {
+    width: 100%;
+}
+
+/* Form */
+form input, form textarea {
+    width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #3b3b3b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e61818;
+}
+
     </style>
 </head>
 <body>
@@ -268,24 +377,74 @@
         <div>
             <div id="skill" class="content-box">
                 <h2>Skill</h2>
-                
                 <p>This content is about my skills. I love coding and building cool projects!</p>
+            
+                <div class="skill-item">
+                    <span>Python</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <span class="percent">80%</span>
+                </div>
+            
+                <div class="skill-item">
+                    <span>C</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 83%;"></div>
+                    </div>
+                    <span class="percent">83%</span>
+                </div>
+            
+                <div class="skill-item">
+                    <span>C++</span>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 50%;"></div>
+                    </div>
+                    <span class="percent">50%</span>
+                </div>
             </div>
+            
             <div id="experience" class="content-box">
                 <h2>Experience</h2>
-                <p>This content is for you. If you are interested in web development, let's collaborate!</p>
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">NXON AI Pvt. Ltd.</h3>
+                    <span style="font-weight: normal;">Dec, 2024 - Present </span>
+                </div>
+                <p>Embedded Software Developer Intern</p>
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">eInfochips,An Arrow Company</h3>
+                    <span style="font-weight: normal;">Jun, 2024 - Jul, 2024 </span>
+                </div>
+                <p>R&D</p>
+                
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">Midas Metcons Pvt. Ltd.</h3>
+                    <span style="font-weight: normal;">Jun, 2023 - Jul, 2023</span>
+                </div>
+                <p>Embedded Trainee Engineer</p>
             </div>
             <div id="education" class="content-box">
                 <h2>Education</h2>
-                <p>This content is for them. Here's where I share my experiences working with others in tech.</p>
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">Nirma University</h3>
+                    <span style="font-weight: normal;">2021 - 2025</span>
+                </div>
+                <p>B.Tech - Electronics And Communication Engineering</p>
+
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">Vishwabharati English Medium School</h3>
+                    <span style="font-weight: normal;">2021</span>
+                </div>
+                <p>12th</p>
             </div>
+            
         </div>
     </div>
 </section>
 
 <!-- Achievements Section -->
 <section id="achievements">
-    <div class="content">
+    <!--<div class="content">-->
         <div>
             <h2>Achievements</h2>
             <ul>
@@ -297,14 +456,14 @@
                     <a href="https://drive.google.com/file/d/1uDI6kCCXakg_zXQ2xxnRARiVfu2ggiOx/view?usp=sharing" target="_blank">Certificate link</a>
             </ul>
         </div>
-    </div>
+    <!--</div>-->
 </section>
 
 <!-- Projects Section -->
 <section id="projects">
     <div class="content">
         <div>
-            <h2>Projects</h2>
+            <h2>My Projects</h2>
             <ul>
                 <li><a href="#">Project 1: E-commerce App</a> - A fully functional e-commerce platform built with React and Node.js.</li>
                 <li><a href="#">Project 2: Personal Blog</a> - A blog built with React and Markdown for dynamic content management.</li>
@@ -355,7 +514,7 @@
 
     // Default content shown when the page loads
     window.onload = function() {
-        showContent('skill'); // Show Skill content by default
+        showContent('experience'); // Show Skill content by default
     };
 
     function showContent(contentId) {
