@@ -7,6 +7,10 @@
     <title>Meen Patel</title>
     <style>
         /* General Styles *//* General Styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* Adjust this to the height of your navbar */
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -54,17 +58,17 @@ header {
 }
 
 .header-image {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
-    margin-right: 20px;
+    margin-right: 200px;
     flex-shrink: 0;
 }
 
 /* Heading and paragraph styling */
 header h1 {
     margin: 0;
-    font-size: 40px;
+    font-size: 100px;
 }
 
 header p {
@@ -112,7 +116,7 @@ section {
 section#about {
     display: flex;
     margin-top: 80px;
-    max-width: 100%;
+    max-width: wrap;
     background-color: black;
     box-shadow: none;
     border-radius: 8px;
@@ -142,6 +146,7 @@ section#about {
 
 .content h2 {
     margin-top: 0;
+    text-align: center;
 }
 
 /* Content boxes */
@@ -366,6 +371,7 @@ form button:hover {
         <div>
             <h2>About Me</h2>
             <p>I am a passionate web developer with a focus on building modern and responsive web applications. I have experience working with various technologies and enjoy creating intuitive user experiences.</p>
+            
             <div class="buttons">
                 <button onclick="showContent('skill')">Skill</button>
                 <button onclick="showContent('experience')">Experience</button>
@@ -378,7 +384,7 @@ form button:hover {
             <div id="skill" class="content-box">
                 <h2>Skill</h2>
                 <p>This content is about my skills. I love coding and building cool projects!</p>
-            
+                
                 <div class="skill-item">
                     <span>Python</span>
                     <div class="progress-bar">
@@ -402,6 +408,10 @@ form button:hover {
                     </div>
                     <span class="percent">50%</span>
                 </div>
+                KEY EXPERTISE : Embedded C, Embedded Systems, Circuit Design, Electronic Circuit Design, Image Processing,
+Assembly Language,Python, Arduino, MASM, ModelSim, MATLAB, Proteus, Firmware, Digital Electronics, 8051
+Microcontroller, C,Keil, Automation, Industrial Automation, Internet of Things, Communication Protocols.
+
             </div>
             
             <div id="experience" class="content-box">
@@ -415,7 +425,7 @@ form button:hover {
                     <h3 style="margin: 0;">eInfochips,An Arrow Company</h3>
                     <span style="font-weight: normal;">Jun, 2024 - Jul, 2024 </span>
                 </div>
-                <p>R&D</p>
+                <p>R&D Intern</p>
                 
                 <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="margin: 0;">Midas Metcons Pvt. Ltd.</h3>
@@ -445,42 +455,104 @@ form button:hover {
 <!-- Achievements Section -->
 <section id="achievements">
     <!--<div class="content">-->
-        <div>
+    <div style="text-align: center; margin-bottom: 30px;">
+    
+        
             <h2>Achievements</h2>
+    </div>
             <ul>
                 <li>Pervasive AI Developer Contest Neuro Glove: Smart hand Rehabilitation Assistant Hackster.io.
                     Neuro Glove project utilizing the resources provided by the AMD KRIA KR260 Robotics Starter Kit. </li>
-                    <a href="https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92" target="_blank">hacksterlink</a>
-                <button onclick="window.open('https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92', '_blank')">hacksterlink</button>
+                    <a href="https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92" target="_blank">View Project</a>
+                <button onclick="window.open('https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92', '_blank')">View Project</button>
+                <button onclick="window.open('', '_blank')">View Certificate</button>
+                
                 <li>Smart India Hackathon, focusing on a solution for vibration analysis using the motion amplification video technique, our team was selected at the college level from 100 teams</li>
-                    <a href="https://drive.google.com/file/d/1uDI6kCCXakg_zXQ2xxnRARiVfu2ggiOx/view?usp=sharing" target="_blank">Certificate link</a>
-            </ul>
+                    <a href="https://drive.google.com/file/d/1uDI6kCCXakg_zXQ2xxnRARiVfu2ggiOx/view?usp=sharing" target="_blank">View Certificate</a>
+                <button onclick="window.open('https://drive.google.com/file/d/1m7mCG1Ytg5oMjW17i7etPMqM-6WHBsKZ/view?usp=drive_link', '_blank')">View Certificate</button>
+                    
+                </ul>
         </div>
     <!--</div>-->
 </section>
 
 <!-- Projects Section -->
+<!-- Projects Section -->
 <section id="projects">
-    <div class="content">
-        <div>
-            <h2>My Projects</h2>
-            <ul>
-                <li><a href="#">Project 1: E-commerce App</a> - A fully functional e-commerce platform built with React and Node.js.</li>
-                <li><a href="#">Project 2: Personal Blog</a> - A blog built with React and Markdown for dynamic content management.</li>
-                <li><a href="#">Project 3: Task Manager</a> - A task management app that allows users to create, edit, and delete tasks.</li>
-            </ul>
-            <!-- Embed YouTube Video -->
-            <div class="youtube-video">
-                <h3>Watch Our Demo Video</h3>
-                <iframe width="300" height="315" src="https://www.youtube.com/embed/0RpXTvIDLDg?si=DGCGpR7Aqv3mSJ12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2>My Projects</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
+        
+        <!-- Project Card -->
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Vertical Lift Module for Warehouse Automation</h3>
+            <i>Embedded C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</i>
+            <ul><li>Designed and code the VLM control system on Arduino Nano.</li>
+                <li>Integrating Real-Time Operating System (RTOS) for improved task management and efficiency.</li>
+                <li>Also implementing IoT capabilities to enable remote monitoring and control of the VLM.</li></ul>
+            <a href="#" target="_blank">View Project</a>
         </div>
+
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Vision Control for Drone System</h3>
+            <i><s>Embedded C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</s></i>
+            <ul><li>Computer vision with OpenCV and ArUco markers.</li>
+                <li>Calibrate camera to correct distortion.</li>
+                <li>Detect marker, estimate pose, and calculate movement.</li></ul>
+            <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>ESP32 AI Voice Assistant</h3>
+            <i><s> C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</s></i>
+            <ul><li>Voice assistant using ESP32 and cloud APIs (Deepgram,Gemini)</li>
+                <li>Features: Real-time STT, NLP response, TTS feedback.</li>
+                <li>Audio logs and responses stored on SD card.</li>
+                <li>Efficient integration on low-power ESP32 hardware.</li>
+            </ul>
+            <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Image change on the basis of song characteristics on Matlab</h3>
+            <i>MATLAB, Algorithms, Python, Digital Image Processing</i>
+            <ul><li>I effectively implemented criteria based on frequency and amplitude to change images dynamically</li>
+                <li>I synchronized image changes with bass music when applied to a song.</li>
+            </ul>
+            <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Smart Irrigation System using 8051</h3>
+            <i>Assembly Language,8051 Microcontroller,Proteus</i>
+            <ul><li>I designed and developed a digital irrigation system using the 8051 microcontroller to automate and optimize water usage for agriculture.</li>
+            </ul>
+            <a href="#" target="_blank">View Project</a>
+        </div>
+
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Project 6</h3>
+            <p>Weather App with OpenWeather API</p>
+            <a href="#" target="_blank">Check It Out</a>
+        </div>
+
+        <!-- Add more as needed -->
+    </div>
+
+    <!-- Optional: Demo Video -->
+    <div class="youtube-video" style="text-align:left; margin-top: 40px;">
+
+        <h3>Watch Our Demo Video</h3>
+        <p>for more projects</p>
+        <iframe width="300" height="315" src="https://www.youtube.com/embed/0RpXTvIDLDg?si=DGCGpR7Aqv3mSJ12" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p>for more projects</p>
     </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
-    <div class="content">
+    
         <div>
             <h2>Contact Me</h2>
             <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
@@ -491,7 +563,7 @@ form button:hover {
                 <button type="submit">Send Message</button>
             </form>
         </div>
-    </div>
+    
 </section>
 
 <!-- Footer -->
