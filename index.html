@@ -185,20 +185,42 @@ section#about {
     color: #bbbbbb;
 }
 
-/* === Skill Section Styling === */
+/* === Skill Section Styling === *//* === Skill Section Styling (Updated to match About section) === */
 #skill {
-    background-color: #1e1e1e;
-    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    background-color: black;
+    box-shadow: none;
+    border-radius: 8px;
+    padding: 40px 20px;
+    color: white;
+    justify-content: center;
+    
+}
+
+#skill .content {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#skill .content > div {
+    flex: 1;
+    min-width: 300px;
+    min-height: 350px;
+    background-color: #000000;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: 20px ;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-#skill h2 {
-    color: #ffffff;
-}
-
+/* Skill Items inside Skill Boxes */
 .skill-item {
     display: flex;
     align-items: center;
@@ -212,7 +234,7 @@ section#about {
 
 .progress-bar {
     background-color: #333;
-    border-radius: 10px;
+    border-radius: 1px;
     height: 8px;
     flex-grow: 1;
     position: relative;
@@ -230,12 +252,13 @@ section#about {
     min-width: 40px;
     text-align: right;
 }
+
 #experience {
     background-color: #1e1e1e;
     color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 100%;
     margin: 20px;
 }
 
@@ -289,7 +312,7 @@ button:hover {
 }
 
 /* Adjust width of About and Skill/Experience/Education */
-#about .content, #skills .content {
+#about .content, #skill .content {
     width: 100%;
 }
 
@@ -315,7 +338,17 @@ form button {
 form button:hover {
     background-color: #e61818;
 }
-
+.two-column-list {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 600px; /* adjust as needed */
+    }
+    .two-column-list ul {
+      width: 50%;
+      list-style-type: disc;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
     </style>
 </head>
 <body>
@@ -360,7 +393,7 @@ form button:hover {
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
+    <a href="#skill">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
 </nav>
@@ -375,7 +408,6 @@ form button:hover {
 <p>
                 
                 
-    KEY EXPERTISE : Embedded C, Embedded Systems, Circuit Design, Electronic Circuit Design, Image Processing, Assembly Language,Python, Arduino, MASM, ModelSim, MATLAB, Proteus, Firmware, Digital Electronics, 8051 Microcontroller, C,Keil, Automation, Industrial Automation, Internet of Things, Communication Protocols.</p>
             
             <div class="buttons">
                 <button onclick="showContent('achievements')">achievements</button>
@@ -443,16 +475,56 @@ form button:hover {
     </div>
 </section>
 
+
+
 <!-- Achievements Section -->
-<section id="skills">
-    <!--<div class="content">-->
-    <div style="text-align: center; margin-bottom: 30px;">
+<section id="skill">
+    <h1><center>Skills</center></h1>
+    <div class="content">
+        <div style="text-align: center; margin-bottom: 3px;">
     
         
-            <h2>Skills</h2>
-    </div>
-    <div>
-                <p>This content is about my skills. I love coding and building cool projects!</p>
+            
+            <div>
+        <h1><center>Key EXPERTISE
+        </center></h1>
+        
+    
+            
+                
+                <div class="two-column-list">
+  <ul>
+    <li>C</li>
+    <li>Embedded Systems</li>
+    <li>Circuit Design</li>
+    <li>Electronic Circuit Design</li>
+    <li>Image Processing</li>
+    <li>Assembly Language</li>
+    <li>Python</li>
+    <li>Arduino</li>
+    <li>MASM</li>
+    <li>ModelSim</li>
+  </ul>
+  <ul>
+    <li>MATLAB</li>
+    <li>Proteus</li>
+    <li>Firmware</li>
+    <li>Digital Electronics</li>
+    <li>8051 Microcontroller</li>
+    <li>Keil</li>
+    <li>Automation</li>
+    <li>Industrial Automation</li>
+    <li>Internet of Things (IoT)</li>
+    <li>Communication Protocols</li>
+  </ul>
+</div>
+
+            </div>    
+            </div>
+            
+            <div>
+                
+                This content is about my skills. I love coding and building cool projects!
                 
                 <div class="skill-item">
                     <span>Python</span>
@@ -478,8 +550,9 @@ form button:hover {
                     <span class="percent">50%</span>
                 </div>
                 
+                
 
-            
+            </div>
     <!--</div>-->
 </section>
 
