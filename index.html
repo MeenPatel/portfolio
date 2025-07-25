@@ -217,7 +217,7 @@ section#about {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 /* Skill Items inside Skill Boxes */
@@ -362,13 +362,12 @@ form button:hover {
         <img src='Meen_photo.png' alt="Meen Patel" class="header-image">
         <div>
             <h1>Meen Patel</h1>
-            <p>Web Developer | Designer | Problem Solver</p>
+            <p>Embedded Engineer | Circuit Designer | Problem Solver</p>
             <div class="buttons">
             <!--<button onclick="showContent('resume')">Resume</button>-->
             <button onclick="window.open('resume.pdf', '_blank')">Resume</button>
 
             <p></p>
-            
 
             <button onclick="window.open('https://www.linkedin.com/in/meen-patel-a48826247', '_blank')">Linkedin</button>
 
@@ -410,8 +409,9 @@ form button:hover {
                 
             
             <div class="buttons">
-                <button onclick="showContent('achievements')">achievements</button>
                 <button onclick="showContent('experience')">Experience</button>
+                <button onclick="showContent('achievements')">Achievements</button>
+
                 <button onclick="showContent('education')">Education</button>
             </div>
         </div>
@@ -486,8 +486,7 @@ form button:hover {
         
             
             <div>
-        <h1><center>Key EXPERTISE
-        </center></h1>
+        <h2>Key Expertise</h2>
         
     
             
@@ -522,10 +521,8 @@ form button:hover {
             </div>    
             </div>
             
-            <div>
-                
-                This content is about my skills. I love coding and building cool projects!
-                
+            <div contentbox>
+               <h2>Coding Languages</h2>
                 <div class="skill-item">
                     <span>Python</span>
                     <div class="progress-bar">
@@ -576,7 +573,7 @@ form button:hover {
 
         <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
             <h3>Vision Control for Drone System</h3>
-            <i><s>Embedded C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</s></i>
+            <i>Aerial robotics, Python, Camera Calibration, Distance Estimation, Automation, C++, ArUco, Performance optimisation of machine</i>
             <ul><li>Computer vision with OpenCV and ArUco markers.</li>
                 <li>Calibrate camera to correct distortion.</li>
                 <li>Detect marker, estimate pose, and calculate movement.</li></ul>
@@ -585,7 +582,7 @@ form button:hover {
 
         <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
             <h3>ESP32 AI Voice Assistant</h3>
-            <i><s> C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</s></i>
+            <i>Firmware, Circuit Design, Arduino, Automation, Internet of Things, Embedded C, Real time, Arduino IDE, Power optimisation</i>
             <ul><li>Voice assistant using ESP32 and cloud APIs (Deepgram,Gemini)</li>
                 <li>Features: Real-time STT, NLP response, TTS feedback.</li>
                 <li>Audio logs and responses stored on SD card.</li>
@@ -629,17 +626,14 @@ form button:hover {
 <!-- Contact Section -->
 <section id="contact">
     
-        <div>
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
-    
+        <div class="form-container">
+    <h1><center>Contact Me</center></h1>
+    <!-- Paste your Google Form embed code below -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSchLmg6t8n_YxGV5MlCPv5M15wrXI9Z7eM2AeXY7jnlB344Ng/viewform?embedded=true" width="100%" height="824" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+    <div>
+       
+    </div>
 </section>
 
 <!-- Footer -->
