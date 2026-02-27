@@ -59,7 +59,7 @@ header {
 
 .header-image {
     width: 350px;
-    height: 350px;
+    height: width;
     border-radius: 50%;
     margin-right: 200px;
     flex-shrink: 0;
@@ -362,18 +362,17 @@ form button:hover {
         <img src='Meen_photo.jpg' alt="Meen Patel" class="header-image">
         <div>
             <h1>Meen Patel</h1>
-            <p>Embedded Engineer | Circuit Designer | Problem Solver</p>
+            <p>Embedded Systems Engineer</p>
+            <p>Autonomy Tech Enthusiast</p>
+            <p>Core Electronics</p>
             <div class="buttons">
             <!--<button onclick="showContent('resume')">Resume</button>-->
             <button onclick="window.open('mailto:meenpatel288@gmail.com', '_blank')">Mail</button>
-            <p></p>
             <button onclick="window.open('resume.pdf', '_blank')">Resume</button>
 
-            <p></p>
-
+            
             <button onclick="window.open('https://www.linkedin.com/in/meen-patel-a48826247', '_blank')">Linkedin</button>
 
-            <p></p>
                 
             <button onclick="window.open('https://github.com/MeenPatel/', '_blank')">Github</button>
 
@@ -405,8 +404,8 @@ form button:hover {
 <section id="about">
     <div class="content">
         <div>
-            <h2>About Me</h2>
-            <p><text>I am an Electronics and Communication Engineering graduate with a strong interest in core electronics, particularly in embedded system design. I have gained hands-on experience and am working on enhancing my skills through practical learning and real-world applications.
+            <h1><center>About me</center></h1>
+            <p><text>I am an Electronics and Communication Engineering graduate and pursuing masters in field of autonomy technologies at FAU with a strong interest in core electronics, particularly in embedded system design. I have also gained hands-on experience and am working on enhancing my skills through practical learning and real-world applications.
 </p>
 <p>
                 
@@ -415,7 +414,6 @@ form button:hover {
             <div class="buttons">
                 <button onclick="showContent('experience')">Experience</button>
                 <button onclick="showContent('achievements')">Achievements</button>
-
                 <button onclick="showContent('education')">Education</button>
             </div>
         </div>
@@ -448,10 +446,10 @@ form button:hover {
 
             <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
                 <h3 style="margin: 0;">NXON AI Pvt. Ltd.</h3>
-                <span style="font-weight: normal;">Dec, 2024 – Present</span>
+                <span style="font-weight: normal;">Dec, 2024 – Jan, 2026</span>
             </div>
             <ul style="margin-top: 5px; margin-bottom: 15px;">
-                <li><strong>Junior Embedded Engineer</strong> (April, 2025 – Present)</li>
+                <li><strong>Junior Embedded Engineer</strong> (April, 2025 – Jan, 2026)</li>
                 <li><strong>Embedded Software Intern</strong> (Dec, 2024 – April, 2025)</li>
             </ul>
 
@@ -473,6 +471,11 @@ form button:hover {
         </div>
 <div id="education" class="content-box">
                 <h2>Education</h2>
+                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="margin: 0;">Friedrich-Alexander-Universitat</h3>
+                    <span style="font-weight: normal;">2026 - 2028</span>
+                </div>
+                <p>M.Sc. - Autonomy Technologies </p>
                 <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
                     <h3 style="margin: 0;">Nirma University</h3>
                     <span style="font-weight: normal;">2021 - 2025</span>
@@ -496,17 +499,13 @@ form button:hover {
 <section id="skill">
     <h1><center>Skills</center></h1>
     <div class="content">
-        <div style="text-align: center; margin-bottom: 3px;">
-    
-        
-            
+        <div style="text-align: center; margin-bottom: 2px;">
             <div>
         <h2>Key Expertise</h2>
         
     
             
-                
-                <div class="two-column-list">
+                <div class="two-column-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px";>
   <ul>
     <li>Embedded C</li>
     <li>Embedded Systems</li>
@@ -571,9 +570,8 @@ form button:hover {
 <!-- Projects Section -->
 <!-- Projects Section -->
 <section id="projects">
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h2>My Projects</h2>
-    </div>
+        <h1><center>My Projects</center></h1>
+    
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
         
         <!-- Project Card -->
