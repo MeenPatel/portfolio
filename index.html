@@ -184,6 +184,36 @@ section#about {
     margin: 5px 0 0;
     color: #bbbbbb;
 }
+/* === achievements Section Styling === */
+#achievements {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 120%/*700px*/;
+    margin: 20px /*auto*/;
+}
+
+#achievements h2 {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.achievements-item {
+    border-left: 3px solid #e61818;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+.achievements-item h3 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.achievements-item p {
+    margin: 5px 0 0;
+    color: #bbbbbb;
+}
 
 /* === Skill Section Styling === *//* === Skill Section Styling (Updated to match About section) === */
 #skill {
@@ -405,7 +435,9 @@ form button:hover {
     <div class="content">
         <div>
             <h1><center>About me</center></h1>
-            <p><text>I am an Electronics and Communication Engineering graduate and pursuing masters in field of autonomy technologies at FAU with a strong interest in core electronics, particularly in embedded system design. I have also gained hands-on experience and am working on enhancing my skills through practical learning and real-world applications.
+            <p><text>I am an Electronics and Communication Engineering graduate and pursuing masters in field of autonomy technologies at 
+                FAU with a strong interest in core electronics, particularly in embedded system design. I have also gained hands-on experience and am working on 
+                enhancing my skills through practical learning and real-world applications.
 </p>
 <p>
                 
@@ -423,20 +455,17 @@ form button:hover {
             <div id="achievements" class="content-box">
 
                 <h2>Achivements</h2>
-                <div class="education-item" style="display: flex; justify-content: space-between; align-items: center;">
+                <div class="achievements-item" style="display: flex; justify-content: space-between; align-items: center;">
 
                 <ul>
-                <li>Pervasive AI Developer Contest Neuro Glove: Smart hand Rehabilitation Assistant Hackster.io.
+                <li><strong>Pervasive AI Developer Contest Neuro Glove:</strong> Smart hand Rehabilitation Assistant Hackster.io.
                     Neuro Glove project utilizing the resources provided by the AMD KRIA KR260 Robotics Starter Kit. </li>
                     <a href="https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92" target="_blank">View Project</a>
                     <p></p>
                     <a href="Hackster_certificate.pdf" target="_blank">View Certificate</a>
-                <!--<button onclick="window.open('https://www.hackster.io/519906/neuro-glove-smart-hand-rehabilitation-assistant-081b92', '_blank')">View Project</button>
-                <button onclick="window.open('', '_blank')">View Certificate</button>-->
-                
-                <li>Smart India Hackathon, focusing on a solution for vibration analysis using the motion amplification video technique, our team was selected at the college level from 100 teams</li>
+                    <p></p>
+                <li><strong>Smart India Hackathon:</strong> Focusing on a solution for vibration analysis using the motion amplification video technique, our team was selected at the college level from 100 teams</li>
                     <a href="SIH_certificate.pdf" target="_blank">View Certificate</a>
-                <!--<button onclick="window.open('https://drive.google.com/file/d/1m7mCG1Ytg5oMjW17i7etPMqM-6WHBsKZ/view?usp=drive_link', '_blank')">View Certificate</button>-->
                 </ul>
                 </div>
             </div>
@@ -499,14 +528,14 @@ form button:hover {
 <section id="skill">
     <h1><center>Skills</center></h1>
     <div class="content">
-        <div style="text-align: center; margin-bottom: 2px;">
+        <div style="text-align: left; margin-bottom: 2px;">
             <div>
         <h2>Key Expertise</h2>
         
     
             
                 <div class="two-column-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px";>
-  <ul>
+  <ul style="white-space: nowrap;">
     <li>Embedded C</li>
     <li>Embedded Systems</li>
     <li>Circuit Design</li>
@@ -518,7 +547,7 @@ form button:hover {
     <li>MASM</li>
     <li>ModelSim</li>
   </ul>
-  <ul>
+  <ul style="white-space: nowrap;">
     <li>Matlab</li>
     <li>Proteus</li>
     <li>Firmware</li>
@@ -575,6 +604,15 @@ form button:hover {
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
         
         <!-- Project Card -->
+        <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
+            <h3>Secure Lock System using nRF52840</h3>
+            <i>Embedded C, Embedded Systems, Firmware, Bluetooth Low Energy (BLE), NFC, IoT Security</i>
+            <ul><li>Designed and developed a secure lock system using nRF52840 with BLE connectivity.</li>
+                <li>Implemented Bluetooth pairing for first-time setup and in-person credential updates.</li>
+                <li>Integrated NFC-based authentication to verify authorized users before granting access.</li>
+            <li>Developed secure access control logic to grant or deny entry based on authentication results.</li></ul>
+        </div>
+
         <div style="background-color: #1e1e1e; border-radius: 10px; padding: 20px; color: white;">
             <h3>Vertical Lift Module for Warehouse Automation</h3>
             <i>Embedded C, Embedded Systems, Firmware, Electronic Circuit Design, Arduino, Automation, Industrial Automation, Internet of Things</i>
@@ -686,10 +724,19 @@ form button:hover {
     }
 
     // Default content shown when the page loads
-    window.onload = function() {
-        showContent('experience'); // Show Skill content by default
-    };
+window.onload = function () {
+    const sections = ['experience', 'achievements', 'education'];
+    let currentIndex = 0;
 
+    // Show first section immediately
+    showContent(sections[currentIndex]);
+
+    // Change section every 5 seconds (5000 milliseconds)
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % sections.length;
+        showContent(sections[currentIndex]);
+    }, 5000);
+};
     function showContent(contentId) {
         var boxes = document.querySelectorAll('.content-box');
         boxes.forEach(function(box) {
